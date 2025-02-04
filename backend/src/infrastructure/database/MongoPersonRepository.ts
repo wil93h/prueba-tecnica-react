@@ -5,7 +5,7 @@ import { PersonModel } from "./mongooseModels";
 export class MongoPersonRepository implements IPersonRepository {
   async create(person: Omit<Person, 'id'>): Promise<Person> {
     const newPerson = await PersonModel.create(person);
-    return newPerson.toJSON() as Person;
+    return this.mapToDomain(newPerson.toObject());
   }
 
   async findById(id: string): Promise<Person | null> {
@@ -13,12 +13,13 @@ export class MongoPersonRepository implements IPersonRepository {
     return person ? this.mapToDomain(person) : null;
   }
 
+  async findAll(): Promise<Person[]> {
+    const persons = await PersonModel.find().lean();
+    return persons.map(this.mapToDomain);
+  }
+
   async update(id: string, person: Partial<Person>): Promise<Person | null> {
-    const updated = await PersonModel.findByIdAndUpdate(
-      id, 
-      person, 
-      { new: true }
-    ).lean();
+    const updated = await PersonModel.findByIdAndUpdate(id, person, { new: true }).lean();
     return updated ? this.mapToDomain(updated) : null;
   }
 

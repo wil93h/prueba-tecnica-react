@@ -1,0 +1,12 @@
+2025-02-04 01:58:49 [info]: Server running on port 3000
+2025-02-04 01:59:04 [info]: POST /api/persons
+2025-02-04 01:59:13 [info]: Server running on port 3000
+2025-02-04 03:47:35 [info]: Server running on port 3000
+2025-02-04 03:54:20 [info]: POST /api/persons
+2025-02-04 04:04:04 [info]: Server running on port 3000
+2025-02-04 04:04:27 [info]: POST /api/persons
+2025-02-04 04:04:27 [error]: UNHANDLED REJECTION! 💥 Shutting down...
+2025-02-04 04:04:27 [error]: ZodError
+2025-02-04 04:22:20 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-04 04:22:24 [info]: Server running on port 3000
+2025-02-04 04:22:49 [info]: POST /api/persons

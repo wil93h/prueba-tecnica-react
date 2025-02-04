@@ -1,19 +1,24 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 import { Person } from '../../domain/entities/Person';
 
-export interface IPersonDocument extends Omit<Person, 'id'>, Document {
-  _id: mongoose.Types.ObjectId;
-  createdAt: Date;
-  updatedAt: Date;
-}
+type IPersonDocument = Omit<Person, 'id'> & mongoose.Document;
 
 const PersonSchema = new Schema<IPersonDocument>({
-
+  nombres: { type: String, required: true },
+  apellidos: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  telefono: { type: String, required: true },
+  tipoIdentificacion: { type: String, required: true, enum: ['CC', 'CE', 'PASAPORTE'] },
+  numeroIdentificacion: { type: String, required: true, unique: true },
+  departamento: { type: String, required: true },
+  municipio: { type: String, required: true },
+  direccion: { type: String, required: true },
+  ingresosMensuales: { type: Number, required: true },
+  docPhoto: { type: String }
 }, {
   timestamps: true,
-  versionKey: false,
   toJSON: {
-    transform: function(doc, ret) {
+    transform: (doc, ret) => {
       ret.id = ret._id.toString();
       delete ret._id;
       delete ret.__v;

@@ -12,11 +12,15 @@ services:
     build: ./backend
     ports:
       - "3000:3000"
+    volumes:
+      - ./backend/logs:/app/logs
+      - ./uploads:/app/uploads
     environment:
-      - NODE_ENV=production
-      - PORT=3000
-      - MONGO_URI=mongodb://mongo:27017/samla_db
-      - JWT_SECRET=youractualsecret
+          - NODE_ENV=production
+          - PORT=3000
+          - MONGODB_URI=mongodb://admin:secret@mongo:27017/samla_db?authSource=admin  # Corregido
+          - UPLOADS_DIR=/uploads
+    restart: always
     depends_on:
       - mongo
 
@@ -29,6 +33,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=samla_db
+
 
 volumes:
   mongo-data:
