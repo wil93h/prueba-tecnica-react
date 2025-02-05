@@ -20,6 +20,8 @@ export default [
     settings: { react: { version: '18.3' } },
     plugins: {
       react,
+      tailwindcss, 
+      prettier,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
@@ -33,6 +35,16 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      "max-len": ["error", 140],
+      "quotes": [2, "double", { "avoidEscape": true }],
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto",
+        },
+      ],
+      "tailwindcss/classnames-order": "warn",
+      "tailwindcss/no-custom-classname": "warn", 
     },
   },
 ]
