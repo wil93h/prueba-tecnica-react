@@ -1,4 +1,10 @@
 @import "tailwindcss";
-:root {
-  font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+@theme {
+  --font-family-sans: Montserrat,"Inter", sans-serif
+  --color-primary: #FF5C00
+  --color-secondary: #F2F4F7
+  --text-secondary: #6b7280
+  --inset-shadow-xs: inset 0 1px 1px rgb(0 0 0 / 0.5);
+  --inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.5);
 }
