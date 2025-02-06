@@ -1,5 +1,5 @@
-import { getValidationError } from "../src/utilities/getValidationError.utility";
-import { SnackbarUtilities } from "../src/utilities/snackbarManager.utility";
+import { getValidationError } from "../utilities/getValidationError.utility";
+import { SnackbarUtilities } from "../utilities/snackbarManager.utility";
 
 export const PrivateInterceptor = () => {
   const headers = {

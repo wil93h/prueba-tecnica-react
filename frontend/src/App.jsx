@@ -1,20 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Register } from './pages/Register/Register'
+import { SnackbarProvider } from 'notistack';
+import { lazy, Suspense } from 'react'
+import RouterWithNotFound from './utilities/routerWithNotFound.utility';
+import { BrowserRouter, Route } from 'react-router-dom';
 
+
+const Register = lazy(() => import('./pages/Register/Register'));
 
 function App() {
   
   return (
     <Suspense fallback={<>Cargando...</>}>
-    <Provider store={store}>
+      <SnackbarProvider>
       <BrowserRouter>
         <RouterWithNotFound>
           <Route path="/" element={<Register/>} />
         </RouterWithNotFound>
       </BrowserRouter>
-    </Provider>
+      </SnackbarProvider>
    </Suspense>
   )
 }

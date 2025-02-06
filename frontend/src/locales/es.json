@@ -1,0 +1,46 @@
+{
+  "firstName": {
+    "label": "Nombres",
+    "required": "El nombre es obligatorio"
+  },
+  "lastName": {
+    "label": "Apellidos",
+    "required": "Los apellidos son obligatorios"
+  },
+  "email": {
+    "label": "Correo electrónico",
+    "required": "El correo electrónico es obligatorio",
+    "invalid": "Debe ser un correo válido"
+  },
+  "phoneNumber": {
+    "label": "Número de teléfono",
+    "required": "El número de teléfono es obligatorio",
+    "invalid": "Debe ser un número válido"
+  },
+  "idType": {
+    "label": "Tipo de identificación",
+    "required": "El tipo de identificación es obligatorio"
+  },
+  "idNumber": {
+    "label": "Número de identificación",
+    "required": "El número de identificación es obligatorio"
+  },
+  "department": {
+    "label": "Departamento",
+    "required": "El departamento es obligatorio"
+  },
+  "municipality": {
+    "label": "Municipio",
+    "required": "El municipio es obligatorio"
+  },
+  "address": {
+    "label": "Dirección",
+    "required": "La dirección es obligatoria"
+  },
+  "monthlyIncome": {
+    "label": "Ingresos mensuales",
+    "required": "Los ingresos mensuales son obligatorios",
+    "positive": "Debe ser un número positivo"
+  },
+  "submit": "Enviar"
+}
