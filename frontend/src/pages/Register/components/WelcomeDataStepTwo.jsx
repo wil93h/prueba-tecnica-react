@@ -9,6 +9,7 @@ import { Camera } from "lucide-react";
 import { Button } from "primereact/button";
 import Samla from "../../../assets/Layer 1.svg"
 import { useTranslation } from "react-i18next";
+import { SnackbarUtilities } from "../../../utilities/snackbarManager.utility";
 
 const WelcomeDataStepTwo = () => {
   const [image, setImage] = useState(null);
@@ -86,9 +87,11 @@ const WelcomeDataStepTwo = () => {
       const response = await axios.post("http://localhost:3000/api/persons", dataToSend);
       console.log("response", response); 
       setValue("loading", false);
+      console.log("🚀 ~ onSubmit ~ response.status:", response.status)
       if(response.status === 201){
+        SnackbarUtilities.success("Datos guardados correctamente");
         reset();
-        setValue("step", 0);
+        setValue("stepsPosition", 0);
       }
     } catch (error) {
       setValue("loading", false);

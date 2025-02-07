@@ -3399,3 +3399,57 @@
 2025-02-07 19:20:16 [info]: Server running on port 3000
 2025-02-07 19:20:44 [info]: POST /api/persons
 2025-02-07 19:22:01 [info]: POST /api/persons
+2025-02-07 19:24:11 [info]: GET /api/persons
+2025-02-07 19:35:52 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:35:52 [info]: Process terminated!
+2025-02-07 19:35:58 [info]: Server running on port 3000
+2025-02-07 19:37:39 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:37:39 [info]: Process terminated!
+2025-02-07 19:37:44 [info]: Server running on port 3000
+2025-02-07 19:40:07 [info]: POST /api/persons
+2025-02-07 19:40:39 [info]: GET /api/persons
+2025-02-07 19:40:44 [info]: DELETE /api/persons/67a65d59e31967478a0cd6aa
+2025-02-07 19:40:55 [info]: DELETE /api/persons/67a65a4733dd528aba500686
+2025-02-07 19:40:58 [info]: GET /api/persons
+2025-02-07 19:41:23 [info]: POST /api/persons
+2025-02-07 19:42:27 [info]: GET /api/persons
+2025-02-07 19:43:11 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:43:11 [info]: Process terminated!
+2025-02-07 19:43:17 [info]: Server running on port 3000
+2025-02-07 19:43:18 [info]: GET /api/persons
+2025-02-07 19:43:22 [info]: PUT /api/persons/67a661e337b25c1daf0b0382
+2025-02-07 19:43:32 [info]: DELETE /api/persons/67a661e337b25c1daf0b0382
+2025-02-07 19:43:35 [info]: GET /api/persons
+2025-02-07 19:43:45 [info]: POST /api/persons
+2025-02-07 19:43:50 [info]: GET /api/persons
+2025-02-07 19:43:54 [info]: DELETE /api/persons/67a66272e0d9b77c23395f9f
+2025-02-07 19:44:26 [info]: POST /api/persons
+2025-02-07 19:47:07 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:47:07 [info]: Process terminated!
+2025-02-07 19:47:12 [info]: Server running on port 3000
+2025-02-07 19:47:18 [info]: GET /api/persons
+2025-02-07 19:47:23 [info]: DELETE /api/persons/67a6629ae0d9b77c23395fa5
+2025-02-07 19:47:53 [info]: POST /api/persons
+2025-02-07 19:48:27 [info]: POST /api/persons
+2025-02-07 19:55:18 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:55:18 [info]: Process terminated!
+2025-02-07 19:55:23 [info]: Server running on port 3000
+2025-02-07 19:55:37 [info]: GET /api/persons
+2025-02-07 19:55:45 [info]: DELETE /api/persons/67a66369ea649ebc70069e95
+2025-02-07 19:55:49 [info]: GET /api/persons
+2025-02-07 19:56:27 [info]: POST /api/persons
+2025-02-07 20:00:32 [info]: GET /api/persons
+2025-02-07 20:00:36 [info]: DELETE /api/persons/67a6656b0c4f233f2deb9be7
+2025-02-07 20:01:16 [info]: POST /api/persons
+2025-02-07 20:01:21 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 20:01:21 [info]: Process terminated!
+2025-02-07 20:01:27 [info]: Server running on port 3000
+2025-02-07 20:01:39 [info]: POST /api/persons
+2025-02-07 20:02:53 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 20:02:53 [info]: Process terminated!
+2025-02-07 20:02:58 [info]: Server running on port 3000
+2025-02-07 20:03:14 [info]: GET /api/persons
+2025-02-07 20:03:22 [info]: DELETE /api/persons/67a6668c0c4f233f2deb9bed
+2025-02-07 20:04:00 [info]: POST /api/persons
+2025-02-07 20:04:24 [info]: GET /api/persons
+2025-02-07 20:04:28 [info]: DELETE /api/persons/67a66730213733c67a6044f1

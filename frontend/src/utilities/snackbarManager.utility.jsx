@@ -1,4 +1,4 @@
-import { useSnackbar } from 'notistack';
+import { enqueueSnackbar, useSnackbar } from 'notistack';
 
 let useSnackbarRef;
 export const SnackbarUtilsConfigurator = () => { 
@@ -8,7 +8,7 @@ export const SnackbarUtilsConfigurator = () => {
 
 export const SnackbarUtilities = {
   toast(msg, variant="default") {
-    useSnackbarRef.enqueueSnackbar(msg, { variant , anchorOrigin: { vertical: 'top', horizontal: 'right' }});
+    enqueueSnackbar(msg, { variant , anchorOrigin: { vertical: 'top', horizontal: 'right' }});
   },
   success(msg) {
     this.toast(msg, 'success');
