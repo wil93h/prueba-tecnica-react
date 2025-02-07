@@ -1,5 +1,6 @@
 import { env } from './infrastructure/config/env';
 import express from 'express';
+import cors from 'cors';
 import { connectDB } from './infrastructure/config/database';
 import routes from './interfaces/routes';
 import { errorHandler } from './infrastructure/middlewares/ErrorMiddleware';
@@ -23,6 +24,13 @@ process.on('unhandledRejection', (error: Error) => {
 });
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 app.use((req, res, next) => {
   logger.info(`${req.method} ${req.url}`);

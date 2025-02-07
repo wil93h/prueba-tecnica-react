@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import axios from 'axios';
 import Webcam from "react-webcam";
 import * as faceapi from "face-api.js";
 import { useFormContext } from "react-hook-form";
@@ -16,9 +17,10 @@ const WelcomeDataStepTwo = () => {
   const webcamRef = useRef(null);
 
   const {
-    watch,
+    getValues,
     setValue,
     formState: { errors },
+    reset
   } = useFormContext();
 
   const { t } = useTranslation();
@@ -67,16 +69,36 @@ const WelcomeDataStepTwo = () => {
 
   const onSubmit = async() => {
     setValue("loading", true);
-    await axios.post("http://localhost:3001/api/face-photo", watch());
-    console.log("Formulario enviado", watch());   
-
-    setValue("loading", true);
+    const dataToSend = {
+      nombres: getValues("firstName"),
+      apellidos: getValues("lastName"),
+      email: getValues("email"),
+      telefono: getValues("phoneNumber"),
+      tipoIdentificacion: getValues("idType"),
+      numeroIdentificacion: getValues("idNumber"),
+      departamento: getValues("department"),
+      municipio: getValues("municipality"),
+      direccion: getValues("address"),
+      ingresosMensuales: getValues("monthlyIncome") || 0
+    };
+    console.log("🚀 ~ onSubmit ~ dataToSend:", dataToSend)
+    try {
+      const response = await axios.post("http://localhost:3000/api/persons", dataToSend);
+      console.log("response", response); 
+      setValue("loading", false);
+      if(response.status === 201){
+        reset();
+        setValue("step", 0);
+      }
+    } catch (error) {
+      setValue("loading", false);
+    }
   };
 
   return (
     <div  className="w-full h-screen flex flex-col">
       <div className='h-7 w-full bg-cover bg-center bg-no-repeat'  
-        style={{ backgroundImage: 'url("/src/assets/bg_img.png"), radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%)'}}
+        style={{ backgroundImage: 'url("/bg_img.png"), radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%)'}}
       ></div> 
       <div className="flex flex-col items-center w-full h-full align-middle justify-center gap-2">
       <img className='p-1 w-30 pb-8' src={Samla} />

@@ -6,8 +6,9 @@ import './utilities/i18n.utility'
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';       
 import 'primeicons/primeicons.css';
+import { PrivateInterceptor } from './service/authInterceptor'
 
-
+PrivateInterceptor();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

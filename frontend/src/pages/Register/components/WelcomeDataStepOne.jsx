@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Samla from "../../../assets/Layer 1.svg";
-import File from "../../../assets/perm_media.svg";
+import Samla from "/Layer 1.svg";
+import File from "/perm_media.svg";
 import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
 import { InputNumber } from "primereact/inputnumber";
@@ -81,7 +81,7 @@ const WelcomeDataStepOne = () => {
   return (
     <div className="w-full sm:h-screen flex flex-col">
       <div className='h-7 w-full bg-cover bg-center bg-no-repeat'  
-        style={{ backgroundImage: 'url("/src/assets/bg_img.png"), radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%)'}}
+        style={{ backgroundImage: 'url("/bg_img.png"), radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%)'}}
       ></div> 
       <div className="sm:h-7/8 w-full flex sm:flex-row flex-col">
         <div className="flex flex-col p-10 justify-center align-middle w-full sm:w-3/6 gap-2">

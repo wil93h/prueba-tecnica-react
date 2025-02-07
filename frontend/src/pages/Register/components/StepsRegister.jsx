@@ -24,11 +24,11 @@ const StepsRegister = () => {
           root: { className: 'hidden' }
         }}
       />
-      {/* <Suspense fallback={<LoadProgressSpinner/>}> */}
+      <Suspense fallback={<LoadProgressSpinner/>}>
         <div className="w-full flex justify-center items-center">
           {steps[watch("stepsPosition")].component}
         </div>  
-      {/* </Suspense> */}
+      </Suspense>
     </>
   )
 }

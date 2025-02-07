@@ -8,7 +8,7 @@ const PersonSchema = new Schema<IPersonDocument>({
   apellidos: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   telefono: { type: String, required: true },
-  tipoIdentificacion: { type: String, required: true, enum: ['CC', 'CE', 'PASAPORTE'] },
+  tipoIdentificacion: { type: String, required: true},
   numeroIdentificacion: { type: String, required: true, unique: true },
   departamento: { type: String, required: true },
   municipio: { type: String, required: true },

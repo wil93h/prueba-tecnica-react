@@ -3,14 +3,11 @@ import { useSnackbar } from 'notistack';
 let useSnackbarRef;
 export const SnackbarUtilsConfigurator = () => { 
   useSnackbarRef = useSnackbar();
-  // const showSnackbar = (message, options) => {
-  //   useSnackbarRef.enqueueSnackbar(message, options);
-  // };
   return null;
 }
 
 export const SnackbarUtilities = {
-  toast(msg, variant) {
+  toast(msg, variant="default") {
     useSnackbarRef.enqueueSnackbar(msg, { variant , anchorOrigin: { vertical: 'top', horizontal: 'right' }});
   },
   success(msg) {

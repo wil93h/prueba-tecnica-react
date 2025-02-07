@@ -3337,3 +3337,65 @@
 2025-02-07 18:02:16 [info]: Server running on port 3000
 2025-02-07 18:02:48 [info]: Server running on port 3000
 2025-02-07 18:03:19 [info]: Server running on port 3000
+2025-02-07 18:03:50 [info]: Server running on port 3000
+2025-02-07 18:04:21 [info]: Server running on port 3000
+2025-02-07 18:04:52 [info]: Server running on port 3000
+2025-02-07 18:05:16 [info]: POST /api/persons
+2025-02-07 18:05:28 [info]: POST /api/persons
+2025-02-07 18:05:33 [info]: POST /api/persons
+2025-02-07 18:05:37 [info]: POST /api/persons
+2025-02-07 18:06:46 [info]: GET /api/persons
+2025-02-07 18:10:04 [info]: PUT /api/persons/67a64b7100ed3a3d1dbfaf08
+2025-02-07 18:10:04 [error]: Error: Unexpected token } in JSON at position 50
+2025-02-07 18:10:04 [error]: Stack: SyntaxError: Unexpected token } in JSON at position 50
+    at JSON.parse (<anonymous>)
+    at parse (/app/node_modules/.pnpm/body-parser@1.20.3/node_modules/body-parser/lib/types/json.js:92:19)
+    at /app/node_modules/.pnpm/body-parser@1.20.3/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (/app/node_modules/.pnpm/raw-body@2.5.2/node_modules/raw-body/index.js:238:16)
+    at done (/app/node_modules/.pnpm/raw-body@2.5.2/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/app/node_modules/.pnpm/raw-body@2.5.2/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-02-07 18:10:04 [error]: Request: PUT /api/persons/67a64b7100ed3a3d1dbfaf08
+2025-02-07 18:10:04 [error]: Body: {}
+2025-02-07 18:11:12 [info]: PUT /api/persons/67a64b7100ed3a3d1dbfaf08
+2025-02-07 18:11:51 [info]: DELETE /api/persons/67a64b7100ed3a3d1dbfaf08
+2025-02-07 18:12:23 [info]: GET /api/persons
+2025-02-07 18:12:24 [info]: GET /api/persons
+2025-02-07 18:12:24 [info]: GET /api/persons
+2025-02-07 18:12:29 [info]: PUT /api/persons/67a64b7100ed3a3d1dbfaf08
+2025-02-07 18:28:28 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 18:28:28 [info]: Process terminated!
+2025-02-07 18:29:36 [info]: Server running on port 3000
+2025-02-07 18:35:11 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 18:35:16 [info]: Server running on port 3000
+2025-02-07 18:38:46 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 18:38:46 [info]: Process terminated!
+2025-02-07 18:38:50 [info]: Server running on port 3000
+2025-02-07 18:40:10 [info]: OPTIONS /api/persons
+2025-02-07 18:52:55 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 18:52:55 [info]: Process terminated!
+2025-02-07 18:53:00 [info]: Server running on port 3000
+2025-02-07 18:53:58 [info]: POST /api/persons
+2025-02-07 19:02:17 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:02:17 [info]: Process terminated!
+2025-02-07 19:02:22 [info]: Server running on port 3000
+2025-02-07 19:03:36 [info]: POST /api/persons
+2025-02-07 19:04:20 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:04:20 [info]: Process terminated!
+2025-02-07 19:04:25 [info]: Server running on port 3000
+2025-02-07 19:05:05 [info]: POST /api/persons
+2025-02-07 19:08:18 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:08:18 [info]: Process terminated!
+2025-02-07 19:08:23 [info]: Server running on port 3000
+2025-02-07 19:08:55 [info]: POST /api/persons
+2025-02-07 19:12:00 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:12:00 [info]: Process terminated!
+2025-02-07 19:12:06 [info]: Server running on port 3000
+2025-02-07 19:20:10 [info]: SIGTERM RECEIVED. Shutting down gracefully...
+2025-02-07 19:20:10 [info]: Process terminated!
+2025-02-07 19:20:16 [info]: Server running on port 3000
+2025-02-07 19:20:44 [info]: POST /api/persons
+2025-02-07 19:22:01 [info]: POST /api/persons

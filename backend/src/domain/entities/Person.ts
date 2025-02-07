@@ -5,7 +5,7 @@ export interface IPerson {
   apellidos: string;
   email: string;
   telefono: string;
-  tipoIdentificacion: 'CC' | 'CE' | 'PASAPORTE';
+  tipoIdentificacion: string;
   numeroIdentificacion: string;
   departamento: string;
   municipio: string;
@@ -18,12 +18,12 @@ export const PersonSchema = z.object({
   nombres: z.string().min(2),
   apellidos: z.string().min(2),
   email: z.string().email(),
-  telefono: z.string().min(8),
-  tipoIdentificacion: z.enum(['CC', 'CE', 'PASAPORTE']),
-  numeroIdentificacion: z.string().min(5),
+  telefono: z.string().min(2),
+  tipoIdentificacion: z.string(),
+  numeroIdentificacion: z.string(),
   departamento: z.string().min(2),
   municipio: z.string().min(2),
-  direccion: z.string().min(5),
+  direccion: z.string().min(2),
   ingresosMensuales: z.number().positive(),
   docPhoto: z.string().optional()
 });
