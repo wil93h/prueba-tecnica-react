@@ -38,7 +38,7 @@ const { watch, setValue, trigger } = useFormContext();
       </div>
     </div>
 
-    <div className='flex flex-col p-10 justify-center align-middle  w-3/6 gap-2'>
+    <div className='flex flex-col p-10 justify-center align-middle w-full sm:w-3/6 gap-2'>
       <img className='p-1 w-30 pb-8' src={Samla} />
       <h1 className='text-2xl font-medium font-sans'>{t("register")}</h1>
       <FormField name="firstName" labelKey="firstName.label" component={InputText} />

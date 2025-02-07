@@ -14,3 +14,11 @@
     font-family: var(--font-family-sans);
   }
 }
+.p-fileupload-buttonbar {
+  display: none !important;
+}
+.p-fileupload-content {
+  border: none !important;
+  padding: 0 !important;
+  height: 100% !important;
+}

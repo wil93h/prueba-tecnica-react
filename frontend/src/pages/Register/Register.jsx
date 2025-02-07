@@ -19,11 +19,20 @@ const Register = () => {
       idNumber: "",
       firstName: "",
       lastName: "",
+      // monthlyIncome: 0,
       idTypeSuggestions: [
         { label: "Pasaporte", value: "passport" },
         { label: "DUI", value: "nationalId" },
       ],
-      stepsPosition:0
+      departmentSuggestions: [
+        { label: "San Salvador", value: "San Salvador" },
+        { label: "Santa Ana", value: "Santa Ana" },
+      ],
+      municipalitySuggestions: [
+        { label: "San Salvador", value: "San Salvador" },
+        { label: "Santa Ana", value: "Santa Ana" },
+      ],
+      stepsPosition:1
     }
   });
 

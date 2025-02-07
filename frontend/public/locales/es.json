@@ -40,8 +40,24 @@
   "monthlyIncome": {
     "label": "Ingresos mensuales",
     "required": "Los ingresos mensuales son obligatorios",
-    "positive": "Debe ser un número positivo"
+    "positive": "Debe ser un número positivo",
+    "invalid": "El valor ingresado no es válido"
+  },
+  "fileUpload": {
+    "dragAndDropText": "Arrastra aquí tu archivo",
+    "instructions": "Solo imágenes (máximo 1MB)",
+    "selectFileButton": "Seleccionar archivo",
+    "validation": {
+      "required": "El archivo es obligatorio",
+      "fileSize": "El archivo es demasiado grande (máximo 1MB)",
+      "fileType": "Solo se permiten imágenes (png, jpg, jpeg)"
+    }
   },
   "register": "Registro",
-  "submit": "Enviar"
+  "housingData": "Datos de vivienda",
+  "photoId": "Fotografía de documento de identidad",
+  "submit": "Enviar",
+  "cancel": "Cancelar",
+  "continue": "Continuar"
+  
 }

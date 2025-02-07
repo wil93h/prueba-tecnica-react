@@ -1,6 +1,7 @@
-import React, { lazy, useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
 import { Steps } from 'primereact/steps';
 import { useFormContext } from 'react-hook-form';
+import LoadProgressSpinner from '../../../components/LoadProgressSpinner';
 
 const RegisterForm = lazy(() => import('./RegisterForm'));
 const WelcomeDataStepOne = lazy(() => import('./WelcomeDataStepOne'));
@@ -23,10 +24,11 @@ const StepsRegister = () => {
           root: { className: 'hidden' }
         }}
       />
-      <div className="w-full flex justify-center items-center bg-white rounded-xl shadow-md">
-        {steps[watch("stepsPosition")].component}
-      </div>
-
+      <Suspense fallback={<LoadProgressSpinner/>}>
+        <div className="w-full flex justify-center items-center">
+          {steps[watch("stepsPosition")].component}
+        </div>  
+      </Suspense>
     </>
   )
 }
