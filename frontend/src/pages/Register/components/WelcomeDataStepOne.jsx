@@ -15,7 +15,7 @@ const WelcomeDataStepOne = () => {
   const { t } = useTranslation();
   const {
     watch,
-    control,
+    reset,
     trigger,
     setValue,
     formState: { errors },
@@ -32,6 +32,10 @@ const WelcomeDataStepOne = () => {
     if (resultado) {
       setValue("stepsPosition", 2);
     }
+  }
+  const cancelStep = async () => {
+    reset();
+    setValue("stepsPosition", 0);
   }
   const handleFileSelect = (event) => {
     const files = event.files;
@@ -134,12 +138,12 @@ const WelcomeDataStepOne = () => {
         <Button
           className="order-last sm:order-first sm:w-1/8 !bg-[#F2F4F7] !text-[#1D2939] !rounded-lg h-10  hover:!bg-[#F2F4F7]/60 !border-[#F2F4F7]"
           label={t("cancel")}
+          onClick={cancelStep}
         />
         <Button
           className="sm:w-1/8 !bg-primary !rounded-lg h-10  hover:!bg-primary/80 !border-primary"
           label={t("continue")}
           onClick={nextStep}
-
         />
       </div>
     </div>

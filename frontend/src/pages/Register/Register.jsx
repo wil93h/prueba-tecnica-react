@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { getRegistrationSchema } from '../../validation/schema';
 import StepsRegister from './components/StepsRegister';
 import { useTranslation } from 'react-i18next';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 
 
@@ -32,12 +33,18 @@ const Register = () => {
         { label: "San Salvador", value: "San Salvador" },
         { label: "Santa Ana", value: "Santa Ana" },
       ],
-      stepsPosition:1
+      stepsPosition:2,
+      loading: false,
     }
   });
-
+  const { watch } = methods;
   return (
     <FormProvider {...methods}>
+      {watch("loading") &&(
+        <div className="fixed inset-0 flex justify-center items-center transparent bg-white opacity-50 z-50">
+          <ProgressSpinner style={{ width: "50px", height: "50px" }} />
+        </div>)
+      }
       <StepsRegister />
     </FormProvider>
   )

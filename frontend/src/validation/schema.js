@@ -43,4 +43,6 @@ export const getRegistrationSchema = (t) =>
           ["image/png", "image/jpg", "image/jpeg"].includes(file.type)
         )
     ),
+    facePhoto: yup.mixed().required(t("facePhoto.required")),
+    loading: yup.boolean(),
   });

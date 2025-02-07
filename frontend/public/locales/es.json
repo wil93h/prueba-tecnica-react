@@ -53,10 +53,20 @@
       "fileType": "Solo se permiten imágenes (png, jpg, jpeg)"
     }
   },
+  "facePhoto": {
+    "label": "Fotografía de rostro",
+    "selfie": "¡Es hora de la selfie!",
+    "smile": "Sonríe y asegúrate de tener buena iluminación.",
+    "required": "La fotografía de rostro es obligatoria",
+    "faceDetected": "Rostro detectado",
+    "noFaceDetected": "No se detectó rostro"
+  },
   "register": "Registro",
   "housingData": "Datos de vivienda",
   "photoId": "Fotografía de documento de identidad",
   "submit": "Enviar",
+  "capture": "Capturar",
+  "takeAgain": "Tomar de nuevo",
   "cancel": "Cancelar",
   "continue": "Continuar"
   
