@@ -10,6 +10,7 @@ export const getRegistrationSchema = (t) =>
       .matches(/^[0-9]+$/, t("phoneNumber.invalid"))
       .required(t("phoneNumber.required")),
     idType: yup.string().required(t("idType.required")),
+    idTypeSuggestions: yup.array().required(),
     idNumber: yup.string().required(t("idNumber.required")),
     department: yup.string().required(t("department.required")),
     municipality: yup.string().required(t("municipality.required")),
@@ -18,4 +19,5 @@ export const getRegistrationSchema = (t) =>
       .number()
       .positive(t("monthlyIncome.positive"))
       .required(t("monthlyIncome.required")),
+    stepsPosition: yup.number().required(),
   });

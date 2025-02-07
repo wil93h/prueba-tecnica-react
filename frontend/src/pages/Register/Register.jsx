@@ -1,5 +1,5 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { getRegistrationSchema } from '../../validation/schema';
 import StepsRegister from './components/StepsRegister';
@@ -10,18 +10,27 @@ import { useTranslation } from 'react-i18next';
 const Register = () => {
   const { t } = useTranslation();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const methods = useForm({
     resolver: yupResolver(getRegistrationSchema(t)),
+    defaultValues: {
+      email: "",
+      phoneNumber: "",
+      address: "",
+      idNumber: "",
+      firstName: "",
+      lastName: "",
+      idTypeSuggestions: [
+        { label: "Pasaporte", value: "passport" },
+        { label: "DUI", value: "nationalId" },
+      ],
+      stepsPosition:0
+    }
   });
 
   return (
-  <form onSubmit={handleSubmit(()=>{console.log("HOLA")})}>
-    <StepsRegister />
-  </form>
+    <FormProvider {...methods}>
+      <StepsRegister />
+    </FormProvider>
   )
 }
 
